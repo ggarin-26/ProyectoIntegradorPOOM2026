@@ -1,0 +1,486 @@
+/* ==========================================================================
+   estilos.css
+   Identidad visual del Sistema ABM sobre la base de Bootstrap 5.
+   ========================================================================== */
+
+:root {
+    --color-primary: #0e2b0a;      /* azul noche - navbar / footer */
+    --color-primary-light: #24365C;
+    --color-accent: #2baf90;       /* verde esmeralda - acciones principales */
+    --color-accent-dark: #1F8C73;
+    --color-danger: #D64550;       /* rojo coral - eliminar */
+    --color-warning: #E0A63D;      /* ámbar - editar / alertas */
+    --color-bg: #F3F5F9;
+    --color-surface: #FFFFFF;
+    --color-text: #1E2A3A;
+    --color-text-muted: #6B7A90;
+    --radius-base: 0.6rem;
+    --shadow-soft: 0 4px 16px rgba(22, 35, 63, 0.06);
+}
+
+:root[data-bs-theme="dark"] {
+    color-scheme: dark;
+    --color-primary: #0b241e;
+    --color-primary-light: #163b32;
+    --color-accent: #34d399;
+    --color-accent-dark: #6ee7b7;
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.brand-text, .footer-heading {
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.app-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    box-shadow: var(--shadow-soft);
+}
+
+.app-navbar .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.app-navbar .brand-text {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.2px;
+}
+
+.app-navbar .brand-text strong {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.app-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--radius-base);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link:focus-visible {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.app-navbar .nav-link.active {
+    color: #fff;
+    background-color: var(--color-accent);
+}
+
+:root[data-bs-theme="dark"] .app-navbar .nav-link.active {
+    color: #06281f;
+}
+
+.app-navbar .avatar-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/*.navbar-fondo {
+    background-image: url("/ProyectoIntegradorPOOM2026/public/assets/img/flota.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }*/
+
+/* ---------- Page header (título de sección) ---------- */
+.page-header {
+    background: var(--color-surface);
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-soft);
+    padding: 1.25rem 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--color-accent);
+}
+
+.page-header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.page-header .breadcrumb {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+/* ---------- Cards / contenedores de contenido ---------- */
+.app-card {
+    background: var(--color-surface);
+    border: none;
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-soft);
+}
+
+.dashboard-stat-icon {
+    display: inline-flex;
+    flex: 0 0 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(52, 211, 153, 0.14);
+    color: var(--color-accent);
+    font-size: 1.25rem;
+}
+
+#resumen-reportes {
+    scroll-margin-top: 7rem;
+}
+
+/* ---------- Botones ---------- */
+.btn-accent {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    color: #fff;
+}
+
+.btn-accion-principal {
+    display: inline-flex;
+    min-height: 3.25rem;
+    align-items: center;
+    justify-content: center;
+    padding-block: 0.9rem;
+}
+
+.btn-outline-accent {
+    color: var(--color-accent-dark);
+    border-color: var(--color-accent);
+    font-weight: 500;
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+}
+
+:root[data-bs-theme="dark"] .btn-accent,
+:root[data-bs-theme="dark"] .btn-accent:hover,
+:root[data-bs-theme="dark"] .btn-accent:focus,
+:root[data-bs-theme="dark"] .btn-outline-accent:hover {
+    color: #06281f;
+}
+
+/* ---------- Tabla de datos ---------- */
+.novedades-listado {
+    --novedades-col-nro: 15%;
+    --novedades-col-fecha: 14%;
+    --novedades-col-descripcion: 43%;
+    --novedades-col-seccion: 18%;
+    --novedades-col-acciones: 10%;
+}
+
+.novedades-filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.novedades-filtros-busqueda {
+    width: 100%;
+    max-width: 400px;
+}
+
+.novedades-filtros-seccion {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.novedades-filtros-seccion .form-select {
+    width: 200px;
+    max-width: 100%;
+}
+
+.novedades-table {
+    min-width: 900px;
+    table-layout: fixed;
+}
+
+.novedades-table .novedades-col-nro {
+    width: var(--novedades-col-nro);
+}
+
+.novedades-table .novedades-col-fecha {
+    width: var(--novedades-col-fecha);
+}
+
+.novedades-table .novedades-col-descripcion {
+    width: var(--novedades-col-descripcion);
+}
+
+.novedades-table .novedades-col-seccion {
+    width: var(--novedades-col-seccion);
+}
+
+.novedades-table .novedades-col-acciones {
+    width: var(--novedades-col-acciones);
+}
+
+.user-filter-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.user-filter-role,
+.user-filter-state {
+    width: 100%;
+}
+
+.user-filter-clear {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user-filter-role .form-select,
+.user-filter-state .form-select {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .novedades-filtros {
+        display: grid;
+        grid-template-columns:
+            var(--novedades-col-nro)
+            var(--novedades-col-fecha)
+            var(--novedades-col-descripcion)
+            var(--novedades-col-seccion)
+            var(--novedades-col-acciones);
+        align-items: center;
+        gap: 0;
+    }
+
+    .novedades-filtros-busqueda {
+        grid-column: 1 / 4;
+    }
+
+    .novedades-filtros-seccion {
+        grid-column: 4 / 6;
+    }
+
+    .user-filter-bar {
+        display: grid;
+        grid-template-columns: 6.6fr 12.7fr 14.8fr 16fr 18.9fr 12fr 19fr;
+        align-items: center;
+        column-gap: 0;
+        row-gap: 0.5rem;
+    }
+
+    .user-filter-search {
+        grid-column: 1 / 5;
+    }
+
+    .user-filter-role {
+        grid-column: 5 / 6;
+        padding-left: 0.5rem;
+    }
+
+    .user-filter-state {
+        grid-column: 6 / 7;
+        padding-left: 0.5rem;
+    }
+
+    .user-filter-clear {
+        grid-column: 7 / 8;
+        justify-self: end;
+        align-self: center;
+        width: auto;
+        padding-left: 0.5rem;
+    }
+
+    .user-filter-state .form-select {
+        min-width: 150px;
+    }
+}
+
+.table-app thead th {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border: none;
+    vertical-align: middle;
+}
+
+.table-app tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.table-app tbody tr:hover {
+    background-color: rgba(43, 175, 144, 0.06);
+}
+
+.table-app td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.badge-seccion {
+    background-color: hsl(var(--seccion-hue) 45% 94%);
+    color: hsl(var(--seccion-hue) 60% 26%);
+    border: 1px solid hsl(var(--seccion-hue) 35% 78%);
+    font-weight: 600;
+}
+
+:root[data-bs-theme="dark"] .badge-seccion {
+    background-color: hsl(var(--seccion-hue) 42% 23%);
+    color: hsl(var(--seccion-hue) 65% 82%);
+    border-color: hsl(var(--seccion-hue) 45% 39%);
+}
+
+.badge-estado-activo {
+    background-color: rgba(43, 175, 144, 0.15);
+    color: var(--color-accent-dark);
+    font-weight: 500;
+    padding: 0.4em 0.75em;
+    border-radius: 999px;
+}
+
+.badge-estado-inactivo {
+    background-color: rgba(214, 69, 80, 0.12);
+    color: var(--color-danger);
+    font-weight: 500;
+    padding: 0.4em 0.75em;
+    border-radius: 999px;
+}
+
+:root[data-bs-theme="dark"] .badge-estado-inactivo {
+    color: #ff7b84;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* ---------- Footer ---------- */
+.app-footer {
+    background-color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.app-footer .brand-text {
+    color: #fff;
+}
+
+.app-footer .footer-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 320px;
+}
+
+.app-footer .footer-heading {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.app-footer .footer-links li {
+    margin-bottom: 0.4rem;
+}
+
+.app-footer .footer-links a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.15s ease;
+}
+
+.app-footer .footer-links a:hover {
+    color: var(--color-accent);
+}
+
+.app-footer .footer-divider {
+    border-color: rgba(255, 255, 255, 0.12);
+    margin: 0.5rem 0 1rem;
+}
+
+.app-footer .footer-copy {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+/* Contenedor principal del banner */
+.contenedor-fondo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../assets/img/flota.png");
+    background-color: #24365C;
+    background-size: cover; /* O '100% auto' si prefieres que se vea completa de lado a lado */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: calc(100% - 2rem);
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--radius-base);
+    overflow: hidden;
+    min-height: 280px; /* Altura ideal recomendada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .contenedor-fondo {
+        width: calc(100% - 3rem);
+    }
+}
+
+/* Sombra para garantizar contraste contra el sol y los buques */
+.texto-sombreado {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}

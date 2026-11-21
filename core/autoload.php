@@ -1,0 +1,25 @@
+<?php
+spl_autoload_register(function (string $claseCompleta): void {
+    // Mapa: prefijo de namespace => carpeta real en el proyecto
+    $mapaNamespace = [
+        'app\\config\\'      => __DIR__ . '/../app/config/',
+        'app\\models\\'      => __DIR__ . '/../app/models/',
+        'app\\controllers\\' => __DIR__ . '/../app/controllers/',
+    ];
+
+    foreach ($mapaNamespace as $prefijo => $directorio) {
+        if (str_starts_with($claseCompleta, $prefijo)) {
+            // Se obtiene la clase relativa y se reemplazan separadores por compatibilidad
+            $nombreClase = substr($claseCompleta, strlen($prefijo));
+            $nombreClase = str_replace('\\', '/', $nombreClase);
+
+            $rutaArchivo = $directorio . $nombreClase . '.php'; 
+
+            if (file_exists($rutaArchivo)) {
+                require_once $rutaArchivo;
+                return;
+            }
+        }
+    }
+});
+?>
