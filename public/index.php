@@ -8,8 +8,7 @@
 
 session_start();
 
-// Corregido: apunta correctamente a app/config/config.php desde la carpeta public/
-require_once __DIR__ . '/../app/config/config.php';      
+require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/../core/autoload.php';
 
 // Lista blanca: solo estos controladores y acciones son accesibles por URL.

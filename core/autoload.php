@@ -2,7 +2,7 @@
 spl_autoload_register(function (string $claseCompleta): void {
     // Mapa: prefijo de namespace => carpeta real en el proyecto
     $mapaNamespace = [
-        'app\\config\\'      => __DIR__ . '/../app/config/',
+        'app\\config\\'      => __DIR__ . '/../config/',
         'app\\models\\'      => __DIR__ . '/../app/models/',
         'app\\controllers\\' => __DIR__ . '/../app/controllers/',
     ];
