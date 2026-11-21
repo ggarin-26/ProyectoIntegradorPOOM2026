@@ -1,4 +1,4 @@
-# Sistema Naval de Novedades ABM — Gestión de Novedades (PHP OOP + PDO + MVC)
+# Sistema Naval de Novedades ABM — Gestión de Novedades y Usuarios (PHP OOP + PDO + MVC)
 
 Aplicación web para la gestión de novedades, secciones y usuarios. Está desarrollada en PHP orientado a objetos, utiliza PDO para el acceso a MySQL/MariaDB y organiza el código con el patrón Modelo-Vista-Controlador (MVC). La interfaz utiliza Bootstrap 5.
 
