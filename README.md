@@ -1,4 +1,4 @@
-# Sistema Naval de Novedades ABM — Gestión de Novedades y Usuarios (PHP OOP + PDO + MVC)
+# Sistema Naval de Novedades ABM — Gestión de Novedades (PHP OOP + PDO + MVC)
 
 Aplicación web para la gestión de novedades, secciones y usuarios. Está desarrollada en PHP orientado a objetos, utiliza PDO para el acceso a MySQL/MariaDB y organiza el código con el patrón Modelo-Vista-Controlador (MVC). La interfaz utiliza Bootstrap 5.
 
@@ -53,7 +53,7 @@ ProyectoIntegradorPOOM2026/
 │       ├── novedades/
 │       │   ├── index.php                # Listado, búsqueda, filtro y reportes
 │       │   ├── crear.php                # Alta de novedad
-│       │   ├── editar.php                # Edición de novedad
+│       │   ├── editar.php               # Edición de novedad
 │       │   ├── Formulario.php           # Formulario de alta y edición
 │       │   └── FormularioVer.php        # Consulta de novedad
 │       ├── partials/
@@ -64,7 +64,7 @@ ProyectoIntegradorPOOM2026/
 │       └── usuarios/
 │           ├── index.php                # Listado, búsqueda y filtros
 │           ├── crear.php                # Alta de usuario
-│           ├── editar.php                # Edición de usuario
+│           ├── editar.php               # Edición de usuario
 │           ├── formulario.php           # Formulario de alta y edición
 │           └── ver.php                  # Consulta de usuario
 ├── config/
@@ -86,11 +86,11 @@ ProyectoIntegradorPOOM2026/
 
 Las rutas se atienden desde `public/index.php`. Las acciones de escritura requieren solicitudes POST; el acceso se limita además según el rol.
 
-| Módulo | URL base | Acciones permitidas por el router |
-| --- | --- | --- |
-| Autenticación | `public/index.php?ctrl=auth&accion=…` | `login`, `iniciar`, `cerrar` |
-| Usuarios | `public/index.php?ctrl=usuarios&accion=…` | `index`, `crear`, `guardar`, `ver`, `editar`, `actualizar`, `eliminar` |
-| Novedades | `public/index.php?ctrl=novedades&accion=…` | `index`, `crear`, `guardar`, `crearSeccion`, `renombrarSeccion`, `ver`, `editar`, `actualizar`, `eliminar` |
+| Módulo        | URL base                                   | Acciones permitidas por el router                                                                          |
+| ------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| Autenticación | `public/index.php?ctrl=auth&accion=…`      | `login`, `iniciar`, `cerrar`                                                                               |
+| Usuarios      | `public/index.php?ctrl=usuarios&accion=…`  | `index`, `crear`, `guardar`, `ver`, `editar`, `actualizar`, `eliminar`                                     |
+| Novedades     | `public/index.php?ctrl=novedades&accion=…` | `index`, `crear`, `guardar`, `crearSeccion`, `renombrarSeccion`, `ver`, `editar`, `actualizar`, `eliminar` |
 
 El router define las acciones aceptadas; los permisos por rol pueden restringirlas aún más.
 

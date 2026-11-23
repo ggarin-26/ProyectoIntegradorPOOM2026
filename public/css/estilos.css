@@ -237,6 +237,13 @@ h1, h2, h3, h4, h5, h6,
     max-width: 100%;
 }
 
+.novedades-filtros-clear {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .novedades-table {
     min-width: 900px;
     table-layout: fixed;
@@ -304,7 +311,15 @@ h1, h2, h3, h4, h5, h6,
     }
 
     .novedades-filtros-seccion {
-        grid-column: 4 / 6;
+        grid-column: 4 / 5;
+        padding-right: 0.5rem;
+    }
+
+    .novedades-filtros-clear {
+        grid-column: 5 / 6;
+        justify-self: end;
+        align-self: center;
+        width: auto;
     }
 
     .user-filter-bar {

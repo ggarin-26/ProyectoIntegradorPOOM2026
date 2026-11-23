@@ -28,7 +28,7 @@ require_once __DIR__ . '/../partials/navbar.php';
             <p class="text-muted mb-0">No hay usuarios activos disponibles para seleccionar.</p>
         <?php else: ?>
             <form method="post" action="<?= BASE_URL ?>/index.php?ctrl=auth&amp;accion=iniciar">
-                <label for="usuario_id" class="form-label">Usuario y rol</label>
+                <label for="usuario_id" class="form-label">Usuario y rol Activo</label>
                 <select id="usuario_id" name="usuario_id" class="form-select mb-3" required>
                     <option value="">Elegí un usuario…</option>
                     <?php foreach ($usuarios as $usuario): ?>

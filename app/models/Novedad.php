@@ -24,6 +24,7 @@ class Novedad {
         $this->db = Database::obtenerInstancia()->obtenerConexion();
     }
 
+    // AQUI se genera de forma automática el número de la novedad basado en la sección y la fecha
     public function crear(): bool {
         try {
             $this->nro = $this->generarNro($this->seccionId, $this->fechaHora);

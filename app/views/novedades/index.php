@@ -132,13 +132,15 @@ require_once __DIR__ . '/../partials/encabezado2.php';
                         </option>
                     <?php endforeach; ?>
                 </select>
-                <?php if ($hayFiltros): ?>
+            </div>
+            <?php if ($hayFiltros): ?>
+                <div class="novedades-filtros-clear">
                     <a href="<?= BASE_URL ?>/index.php?ctrl=novedades&accion=index"
                        class="btn btn-outline-secondary" title="Quitar filtros">
                         <i class="bi bi-x-lg"></i>
                     </a>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
         </form>
 
         <div class="table-responsive">

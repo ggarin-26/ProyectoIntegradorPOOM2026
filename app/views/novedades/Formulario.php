@@ -121,7 +121,6 @@ $esEdicion = isset($id);
             <?php endif; ?>
         </div>
 
-        <div class="col-12 col-md-4">
     </div>
 
     <div class="d-flex justify-content-end gap-2 mt-4 pt-3">

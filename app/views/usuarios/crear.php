@@ -48,7 +48,6 @@ require_once __DIR__ . '/../partials/encabezado2.php';
                 </div>
             </div>
         </div>
-    </div>
 
 </main>
 

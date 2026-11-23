@@ -1,6 +1,6 @@
 <?php
 /**
- * app/views/usuarios/partials/formulario.php
+ * app/views/usuarios/formulario.php
  * Formulario compartido por las vistas de alta (crear.php) y edición (editar.php).
  *
  * Variables que debe definir la vista que lo incluye:
@@ -62,7 +62,9 @@ $urlAccion = $urlAccion ?? '';
             <label for="email" class="form-label fw-medium">Correo electrónico</label>
             <input type="email" id="email" name="email" maxlength="150" required
                    class="form-control<?= $claseCampo('email') ?>"
-                   value="<?= htmlspecialchars($datos['email'] ?? '') ?>">
+                   value="<?= htmlspecialchars($datos['email'] ?? '') ?>"
+                   placeholder="cuenta@dominio.com">
+                   <div class="form-text">Ingresar una cuenta de correo que no exista.</div>
             <?php if (isset($errores['email'])): ?>
                 <div class="invalid-feedback"><?= htmlspecialchars($errores['email']) ?></div>
             <?php endif; ?>
